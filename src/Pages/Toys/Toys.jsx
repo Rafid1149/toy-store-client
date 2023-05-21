@@ -5,6 +5,8 @@ import useTitle from "../../Hook/useTitle";
 
 const Toys = () => {
 
+    const [searchText, setSearchText] = useState('');
+
     useTitle('Toys')
     const [toyCollection, setToyCollection] = useState([]);
 
@@ -14,13 +16,18 @@ const Toys = () => {
 
     useEffect(() => {
         setLoading(true);
-        fetch('http://localhost:5000/toys')
+        fetch(' https://b7a11-toy-marketplace-server-side-rafid1149.vercel.app/toys')
             .then(response => response.json())
             .then(data => {
                 setToyCollection(data);
                 setLoading(false);
             });
     }, [])
+    useEffect( () =>{
+        fetch(` https://b7a11-toy-marketplace-server-side-rafid1149.vercel.app/searchToy/${searchText}`)
+        .then(res => res.json())
+        .then(data => setToyCollection(data))
+    } , [searchText])
 
     if (loading) {
         return <div className="mx-auto text-center">
@@ -33,7 +40,7 @@ const Toys = () => {
             <h2 className="text-center font-bold text-4xl my-6"> All Toys</h2>
             <div className="form-control my-5 w-full block">
 
-                <input type="text" placeholder="search your toys" className="input input-bordered w-inherit" />
+                <input type="text" onChange={event => setSearchText(event.target.value)} placeholder="search your toys" className="input input-bordered w-inherit" />
             </div>
 
             <div className="overflow-x-auto w-full">

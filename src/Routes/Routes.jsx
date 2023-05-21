@@ -51,12 +51,12 @@ import ToyDetails from '../Pages/ToyDetails/ToyDetails'
         {
             path: '/updateToy/:id',
             element: <PrivateRoute><UpdateToys></UpdateToys></PrivateRoute>,
-            loader: ({params}) => fetch(`http://localhost:5000/toy/${params.id}`)
+            loader: ({params}) => fetch(` https://b7a11-toy-marketplace-server-side-rafid1149.vercel.app/toy/${params.id}`)
         },
         {
             path: 'toy/:id',
             element: <ToyDetails></ToyDetails>,
-            loader: ({params}) => fetch(`http://localhost:5000/toy/${params.id}`)
+            loader: ({params}) => fetch(` https://b7a11-toy-marketplace-server-side-rafid1149.vercel.app/toy/${params.id}`)
         }
       ]
     },

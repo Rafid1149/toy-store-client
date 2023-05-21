@@ -6,6 +6,7 @@ import useTitle from "../../Hook/useTitle";
 
 const SingleToy = () => {
   const toy = useLoaderData();
+  
   useTitle(toy?.name);
   const {
     name,

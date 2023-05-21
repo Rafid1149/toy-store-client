@@ -22,7 +22,7 @@ const AddToys = () => {
 
 
   const onSubmit = (data) => {
-    fetch("http://localhost:5000/post-toy", {
+    fetch(" https://b7a11-toy-marketplace-server-side-rafid1149.vercel.app/post-toy", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
