@@ -55,7 +55,7 @@ import ToyDetails from '../Pages/ToyDetails/ToyDetails'
         },
         {
             path: 'toy/:id',
-            element: <ToyDetails></ToyDetails>,
+            element: <PrivateRoute><ToyDetails></ToyDetails></PrivateRoute>,
             loader: ({params}) => fetch(` https://b7a11-toy-marketplace-server-side-rafid1149.vercel.app/toy/${params.id}`)
         }
       ]
