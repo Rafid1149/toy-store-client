@@ -36,7 +36,7 @@ const AddToys = () => {
 
   return (
     <div className="w-9/12 mx-auto">
-      <h2 className="my-5 text-2xl text-primary text-center font-bold">
+      <h2 className="my-5 text-2xl text-black text-center font-bold">
         Add your Toys
       </h2>
       <form onSubmit={handleSubmit(onSubmit)}>
@@ -112,7 +112,9 @@ const AddToys = () => {
         {/* errors will return when field validation fails  */}
         {errors.exampleRequired && <span>This field is required</span>}
 
-        <input className="btn bg-primary" type="submit" />
+       <div className="mx-auto">
+       <input className="btn btn-primary my-5 " type="submit" />
+       </div>
       </form>
       <div>
         <ToastContainer />
