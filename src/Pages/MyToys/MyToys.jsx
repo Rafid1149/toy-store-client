@@ -49,13 +49,24 @@ const MyToys = () => {
         }
       });
     };
-
+    const handleSortByPrice = async (sortOrder) => {
+      try {
+        const response = await fetch(
+          ` https://b7a11-toy-marketplace-server-side-rafid1149.vercel.app/myToys/${user?.email}/sortByPrice/${sortOrder}`
+        );
+        const data = await response.json();
+        setToys(data);
+      } catch (error) {
+        console.error("Error sorting toys:", error);
+      }
+    };
 
 if (loading) {
     return <div className="mx-auto text-center">
       <progress className="progress w-56  my-5 items-center"></progress>
     </div>
   }
+  
 
     return (
         <div className="my-12">
@@ -67,7 +78,23 @@ if (loading) {
                             <th>#</th>
                             <th>NAME</th>
                             <th>CATEGORY</th>
-                            <th>PRICE</th>
+                            <th>
+                Price 
+                <div className="flex justify-evenly items-center -ms-5">
+                  <button
+                    className="sort-button text-xl text-primary"
+                    onClick={() => handleSortByPrice("asc")}
+                  >
+                    ↑
+                  </button>
+                  <button
+                    className="sort-button text-xl text-primary"
+                    onClick={() => handleSortByPrice("desc")}
+                  >
+                    ↓
+                  </button>
+                </div>
+              </th>
                             <th> QUANTITY</th>
                             <th>DETAILS</th>
                             <th></th>
@@ -80,6 +107,7 @@ if (loading) {
                 <td>{toy.name}</td>
                 <td>{toy.category}</td>
                 <td>{toy.price}</td>
+               
                 <td>{toy.quantity}</td>
                 <td>{toy.description.slice(0, 50)}....</td>
                 <td>

@@ -39,7 +39,7 @@ const UpdateToys = () => {
   };
   return (
     <div className="w-9/12 mx-auto my-10">
-      <h2 className="mb-5 text-3xl text-primary text-center font-bold">
+      <h2 className="mb-5 text-5xl text-gray-950 text-center font-bold">
         Update Your Product
       </h2>
       <form onSubmit={handleSubmit(onSubmit)}>
@@ -72,7 +72,7 @@ const UpdateToys = () => {
         {/* errors will return when field validation fails  */}
         {errors.exampleRequired && <span>This field is required</span>}
 
-        <input value="Update" className="btn bg-primary" type="submit" />
+        <input value="Update" className="btn btn-warning" type="submit" />
       </form>
     </div>
   );
