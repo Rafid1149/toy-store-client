@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Membership = () => {
     return (
-        <div className="hero min-h-screen bg-base-200 my-12">
+        <div data-aos="fade-right" className="hero min-h-screen bg-base-200 my-12">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <img src="https://i.ibb.co/y0n4P7m/f3.jpg" className="max-w-sm rounded-lg  shadow-2xl" />
           <div className="w-1/2">
