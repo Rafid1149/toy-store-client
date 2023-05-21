@@ -5,9 +5,9 @@ const Footer = () => {
     return (
         <footer className="footer p-10 bg-base-200 text-base-content rounded-2xl">
         <div>
-          <p className='font-semibold'>© Toy world</p>
+          <p className='font-semibold'>© Toy Shop</p>
           <img className='w-24 h-24 image-full' src={logo} alt="" />
-          <p className='font-bold text-xl text-purple-600'>Toy World</p>
+          <p className='font-bold text-xl text-gray-900'>Toy World</p>
         </div> 
         <div>
           <span className="footer-title">Services</span> 

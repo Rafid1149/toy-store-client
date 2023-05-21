@@ -189,7 +189,7 @@ const Register = () => {
                                     </Link>
                                 </p>
                             </form>
-                            <div className=" text-center items-center">
+                            <div className=" text-center">
                                 <button
                                     onClick={handleGoogleLogin}
                                     type="button"
