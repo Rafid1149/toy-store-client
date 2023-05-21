@@ -1,11 +1,12 @@
-import PrivateRoute from "../../Routes/PrivateRoute";
+import { Link } from "react-router-dom";
+
 
 
 // eslint-disable-next-line react/prop-types
 const SingleToy = ({ toy }) => {
     console.log(toy);
     // eslint-disable-next-line react/prop-types
-    const {  postedBy, quantity, price, name, category } = toy;
+    const {_id , postedBy, quantity, price, name, category } = toy;
 
     return (
         
@@ -24,7 +25,7 @@ const SingleToy = ({ toy }) => {
             </td>
             <td>{quantity}</td>
             <th>
-              <PrivateRoute> <button className="btn btn-success"> View Details</button></PrivateRoute>
+            <Link to={`/toy/${_id}`}> <button className="btn btn-success"> View Details</button></Link>
             </th>
         </tr>
     );
