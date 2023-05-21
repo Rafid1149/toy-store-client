@@ -72,8 +72,8 @@ const Navbar = () => {
                                 My Toys
                             </NavLink>
                         </div>
-                        <div className="w-9  rounded-full  ring-1 ring-primary">
-                            <img data-tip={user.displayName} className="tooltip-bottom tooltip-primary" src={user.photoURL} />
+                        <div className="w-9  ">
+                            <img data-tip={user.displayName} className="tooltip-bottom  rounded-full  ring-1 ring-primary tooltip-primary" src={user.photoURL} />
                         </div>
                     </div>
                 )}
