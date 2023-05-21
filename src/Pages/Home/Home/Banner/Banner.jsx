@@ -17,7 +17,7 @@ you can find every kind of toy here</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, <br /> iure accusantium! Sequi incidunt, voluptas asperiores ab quaerat non magni quisquam?</p>
                         <div className='flex gap-5'>
                             <button className="btn btn-primary gap-2">Discover More</button>
-                            <button className="btn btn-secondary gap-2">Latest Project</button>
+                            <button className="btn btn-secondary gap-2">Buy Now!</button>
                         </div>
                     </div>
                 </div>
@@ -35,7 +35,7 @@ you can find every kind of toy here</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, <br /> iure accusantium! Sequi incidunt, voluptas asperiores ab quaerat non magni quisquam?</p>
                         <div className='flex gap-5'>
                             <button className="btn btn-primary gap-2">Discover More</button>
-                            <button className="btn btn-secondary gap-2">Latest Project</button>
+                            <button className="btn btn-secondary gap-2">Buy Now!</button>
                         </div>
                     </div>
                 </div>
@@ -53,7 +53,7 @@ you can find every kind of toy here</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, <br /> iure accusantium! Sequi incidunt, voluptas asperiores ab quaerat non magni quisquam?</p>
                         <div className='flex gap-5'>
                             <button className="btn btn-primary gap-2">Discover More</button>
-                            <button className="btn btn-secondary gap-2">Latest Project</button>
+                            <button className="btn btn-secondary gap-2">Buy Now!</button>
                         </div>
                     </div>
                 </div>
