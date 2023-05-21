@@ -23,10 +23,10 @@ const Contact = () => {
                     <label className="label">
                         <span className="label-text font-semibold">Message</span>
                     </label>
-                    <input type="text" placeholder="Feel free to tell us" className="input  input-bordered w-inherit  " />
+                    <input type="text" placeholder="Feel free to tell us your opinion" className="input  input-bordered w-inherit  " />
                 </div>
                 <div>
-                    <button className="my-5 btn btn-warning">Submit</button>
+                    <button className="my-5 btn btn-warning btn-blockn">Submit</button>
                 </div>
                
             </div>

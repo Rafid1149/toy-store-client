@@ -10,7 +10,7 @@ const ReactTabs = () => {
   const [toys, setToys] = useState([]);
 
   useEffect(() => {
-    fetch("https://toy-house-server-sable.vercel.app/toysCategory")
+    fetch("http://localhost:5000/toysCategory")
       .then((res) => res.json())
       .then((data) => {
         setCategories(data);

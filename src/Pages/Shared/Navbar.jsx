@@ -8,6 +8,7 @@ const Navbar = () => {
 
     const [open, setOpen] = useState(false);
     const { user, logOut } = useContext(AuthContext);
+    console.log(user);
     const handleLogout = () => {
         logOut();
     };
@@ -72,9 +73,14 @@ const Navbar = () => {
                                 My Toys
                             </NavLink>
                         </div>
-                        <div className="w-9  ">
-                            <img data-tip={user.displayName} className="tooltip-bottom  rounded-full  ring-1 ring-primary tooltip-primary" src={user.photoURL} />
-                        </div>
+                        <div
+            className="avatar tooltip tooltip-bottom tooltip-primary"
+            data-tip={user.displayName}
+          >
+            <div className="w-9 rounded-full  ring-1 ring-primary">
+              <img src={user.photoURL} />
+            </div>
+          </div>
                     </div>
                 )}
                 {!user ? (
