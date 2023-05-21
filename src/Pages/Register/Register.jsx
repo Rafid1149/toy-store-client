@@ -6,8 +6,10 @@ import { getAuth, updateProfile } from "firebase/auth";
 
 import { AuthContext } from "../../Provider/Authprovider";
 import app from "../../firebase/firebase.config";
+import useTitle from "../../Hook/useTitle";
 
 const Register = () => {
+    useTitle('Register')
     const auth = getAuth(app);
     const location = useLocation();
     const from = location.state?.from || "/";

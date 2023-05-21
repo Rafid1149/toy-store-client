@@ -3,8 +3,10 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 
 import {  FaGoogle } from "react-icons/fa";
 import { AuthContext } from "../../Provider/Authprovider";
+import useTitle from "../../Hook/useTitle";
 
 const Login = () => {
+  useTitle('Login');
   const location = useLocation();
   const from = location.state?.from || "/";
   const { signIn, signInWithGoogle } =

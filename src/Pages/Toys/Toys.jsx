@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import SingleToy from "./SingleToy";
+import useTitle from "../../Hook/useTitle";
 
 
 const Toys = () => {
 
+    useTitle('Toys')
     const [toyCollection, setToyCollection] = useState([]);
 
     const [seeAll, setSeeAll] = useState(false);

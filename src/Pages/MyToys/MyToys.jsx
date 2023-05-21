@@ -1,9 +1,11 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Provider/Authprovider";
 import { Link } from "react-router-dom";
+import useTitle from "../../Hook/useTitle";
 
 
 const MyToys = () => {
+    useTitle('My Toys');
 
     const { user } = useContext(AuthContext);
     const [loading, setLoading] = useState(false);

@@ -1,6 +1,10 @@
+import useTitle from "../../Hook/useTitle";
 
 
 const Blogs = () => {
+
+    useTitle('Blog');
+
     return (
         <div className="S my-12">
             <div
