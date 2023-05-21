@@ -59,7 +59,7 @@ const Navbar = () => {
                         <div>
                             <NavLink
                                 to="/addToys"
-                                className={({ isActive }) => (isActive ? "font-bold text-2xl" : "font-bold text-2xl")}
+                                className={({ isActive }) => (isActive ? "font-bold text-2xl link" : "font-bold text-2xl")}
                             >
                                 Add Toys
                             </NavLink>
@@ -67,7 +67,7 @@ const Navbar = () => {
                         <div>
                             <NavLink
                                 to="/myToys"
-                                className={({ isActive }) => (isActive ? "font-bold text-2xl inline" : "font-bold text-2xl")}
+                                className={({ isActive }) => (isActive ? "font-bold text-2xl link" : "font-bold text-2xl")}
                             >
                                 My Toys
                             </NavLink>

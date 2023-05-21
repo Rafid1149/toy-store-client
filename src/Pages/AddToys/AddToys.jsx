@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext,  } from "react";
 
 
 import { ToastContainer, toast } from "react-toastify";
@@ -10,6 +10,7 @@ import { useForm } from "react-hook-form";
 
 const AddToys = () => {
   const { user } = useContext(AuthContext);
+
   const notify = () => toast("Toy Added");
   useTitle("Add Toys");
 
@@ -29,10 +30,12 @@ const AddToys = () => {
       .then((res) => res.json())
       .then((result) => {
         if (result.insertedId) {
-          notify();
-        }
-      });
+          notify()}
+          
+        });
   };
+ 
+  
 
   return (
     <div className="w-9/12 mx-auto">
@@ -112,9 +115,9 @@ const AddToys = () => {
         {/* errors will return when field validation fails  */}
         {errors.exampleRequired && <span>This field is required</span>}
 
-       <div className="mx-auto">
-       <input className="btn btn-primary my-5 " type="submit" />
-       </div>
+        <div className="mx-auto">
+          <input className="btn btn-primary my-5 " type="submit" />
+        </div>
       </form>
       <div>
         <ToastContainer />

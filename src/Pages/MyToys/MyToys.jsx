@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 const MyToys = () => {
 
     const { user } = useContext(AuthContext);
+    const [loading, setLoading] = useState(false);
 
     const [toys, setToys] = useState([])
     useEffect(() => {
@@ -14,6 +15,7 @@ const MyToys = () => {
             .then(data => {
                 console.log(data);
                 setToys(data);
+                setLoading(false);
             })
 
     }, [user])
@@ -22,17 +24,22 @@ const handleDelete =() =>{
 
 }
 
+
+if (loading) {
+    return <div className="mx-auto text-center">
+      <progress className="progress w-56  my-5 items-center"></progress>
+    </div>
+  }
+
     return (
-        <div>
-            <div className="overflow-x-auto w-full">
-                <table className="table w-full">
+        <div className="my-12">
+            <div className="overflow-x-auto w-full block mx-auto">
+                <table className="table w-full ">
                     {/* head */}
                     <thead>
                         <tr>
-                            <th>
-
-                                NAME
-                            </th>
+                            <th>#</th>
+                            <th>NAME</th>
                             <th>CATEGORY</th>
                             <th>PRICE</th>
                             <th> QUANTITY</th>
