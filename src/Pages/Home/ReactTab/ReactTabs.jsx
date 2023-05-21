@@ -10,7 +10,7 @@ const ReactTabs = () => {
   const [toys, setToys] = useState([]);
 
   useEffect(() => {
-    fetch(" https://b7a11-toy-marketplace-server-side-rafid1149.vercel.app/toysCategory")
+    fetch("https://toy-house-server-sable.vercel.app/toysCategory")
       .then((res) => res.json())
       .then((data) => {
         setCategories(data);
@@ -51,7 +51,7 @@ const ReactTabs = () => {
                   <p>Price: ${toy.price}</p>
                   <div className="flex justify-between">
                     <Rating
-                      readOnly
+                      
                       style={{ maxWidth: 150 }}
                       value={toy.rating}
                     />
